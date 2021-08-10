@@ -17,8 +17,11 @@
 <div class="main">
   <div class="left-section">
     <label for="bill">Bill</label>
-    <img src="images/icon-dollar.svg" alt="" class="dollar">
-    <input class="bill" type="text" maxlength="7">
+    <span class="error">Can't be zero</span>
+    <div class="input-container">
+      <img src="images/icon-dollar.svg" alt="" class="dollar">
+      <input class="bill" type="number" maxlength="7" min="0">
+    </div>
     <div class="options">
       <span>Select Tip %</span>
       <button class="btn">5%</button>
@@ -27,6 +30,12 @@
       <button class="btn">25%</button>
       <button class="btn">50%</button>
       <input type="text" class="custom-tip" placeholder="Custom"></input>
+    </div>
+    <label for="people">Number of people</label>
+    <span class="error">Can't be zero</span>
+    <div class="input-container">
+      <img src="images/icon-person.svg" alt="" class="person">
+      <input class="people" type="number" maxlength="7" min="0">
     </div>
   </div>
   <div class="right-section"></div>
