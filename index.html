@@ -17,28 +17,44 @@
 <div class="main">
   <div class="left-section">
     <label for="bill">Bill</label>
-    <span class="error">Can't be zero</span>
+    <span class="error-bill">Can't be zero</span>
     <div class="input-container">
       <img src="images/icon-dollar.svg" alt="" class="dollar">
-      <input class="bill" type="number" maxlength="7" min="0">
+      <input class="bill" type="number" maxlength="7" min="0" placeholder="0">
     </div>
     <div class="options">
       <span>Select Tip %</span>
-      <button class="btn">5%</button>
-      <button class="btn">10%</button>
-      <button class="btn">15%</button>
-      <button class="btn">25%</button>
-      <button class="btn">50%</button>
-      <input type="text" class="custom-tip" placeholder="Custom"></input>
+      <button class="btn" value=5>5%</button>
+      <button class="btn" value=10>10%</button>
+      <button class="btn" value=15>15%</button>
+      <button class="btn" value=25>25%</button>
+      <button class="btn" value=50>50%</button>
+      <input type="number" class="custom-tip" placeholder="Custom" maxlength="2" min="0"></input>
     </div>
     <label for="people">Number of people</label>
-    <span class="error">Can't be zero</span>
+    <span class="error-people">Can't be zero</span>
     <div class="input-container">
       <img src="images/icon-person.svg" alt="" class="person">
-      <input class="people" type="number" maxlength="7" min="0">
+      <input class="people" type="number" maxlength="7" min="0" placeholder="0">
     </div>
   </div>
-  <div class="right-section"></div>
+  <div class="right-section">
+    <div class="amount">
+      <span class="right-inner-head">Tip Amount</span>
+      <span class="tip-amount">$0.00</span>
+      <br>
+      <span class="right-inner-footer">/ person</span>
+    </div>
+    <div class="total">
+      <span class="total-amount">$0.00</span>
+      <span class="right-inner-head">Total</span>
+      <br>
+      <span class="right-inner-footer">/ person</span>
+    </div>
+    <div class="reset">
+      <button class="reset-btn">Reset</button>
+    </div>
+  </div>
 
 </div>
   
@@ -47,4 +63,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> --->
 </body>
+<script src="src/script.js"></script>
 </html>
