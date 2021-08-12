@@ -47,9 +47,9 @@ validateElements.forEach((item) => {
 
 
 const calculateTotals = (tip) => {
-    const billAmount = parseInt(bill.value);
-    const numberOfPpl = parseInt(people.value);
-    let tipAmount = (billAmount/100)*parseInt(tip);
+    const billAmount = parseFloat(bill.value);
+    const numberOfPpl = parseFloat(people.value);
+    let tipAmount = (billAmount/100)*parseFloat(tip);
 
     if(!billAmount || !numberOfPpl){
         document.querySelector('.total-amount').textContent = `$0.00`;
@@ -59,6 +59,9 @@ const calculateTotals = (tip) => {
         !tipAmount ? tipAmount = 0 : tipAmount;
         const totalTip = tipAmount / numberOfPpl;
         const totalPayable = (billAmount + tipAmount) / numberOfPpl;
+        console.log(billAmount)
+        console.log(totalPayable)
+        console.log(tipAmount)
         document.querySelector('.tip-amount').textContent = `$${totalTip.toFixed(2)}`;
         document.querySelector('.total-amount').textContent = `$${totalPayable.toFixed(2)}`;
     }
